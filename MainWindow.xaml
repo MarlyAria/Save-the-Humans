@@ -42,7 +42,7 @@
         </StackPanel>
 
         <Canvas x:Name="playArea" 
-                Grid.ColumnSpan="3">
+                Grid.ColumnSpan="3" Margin="0,0,-0.4,150" Grid.RowSpan="2">
             <Canvas.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -60,6 +60,11 @@
                     <GradientStop Color="#FF3C7A29" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
+            <StackPanel x:Name="Human" Orientation="Vertical">
+                <Ellipse Fill="White" Height="10" Width="10" Stroke="Black"/>
+                <Rectangle Fill="White" Height="25" Width="10" Stroke="Black"/>
+               
+            </StackPanel>
         </Canvas>
 
     </Grid>
