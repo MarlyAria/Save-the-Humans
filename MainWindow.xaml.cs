@@ -39,21 +39,22 @@ namespace Save_the_Humans
         {
             ContentControl enemy = new ContentControl();
             enemy.Template = Resources["EnemyTemplate"] as ControlTemplate;
-            AnimateEnemy(enemy, 0, playArea.Width - 100, "(Canvas.Left)");
+            AnimateEnemy(enemy, 0, playArea.ActualWidth - 100, "(Canvas.Left)");
             AnimateEnemy(enemy, random.Next((int)playArea.ActualHeight - 100),
                 random.Next((int)playArea.ActualHeight - 100), "(Canvas.Top)");
             playArea.Children.Add(enemy);
         }
 
         private void AnimateEnemy(ContentControl enemy, double from, double to, string propertyToAnimate)
-        {
+         {
             Storyboard storyboard = new Storyboard() { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever };
+             
             DoubleAnimation animation = new DoubleAnimation()
-            {
-                From = from,
-                To = to,
-                Duration = new Duration(TimeSpan.FromSeconds(random.Next(4, 6))),
-            };
+                {
+                     From = from,
+                     To = to,
+                     Duration = new Duration(TimeSpan.FromSeconds(random.Next(4, 6))),
+                };
 
             Storyboard.SetTarget(animation, enemy);
             Storyboard.SetTargetProperty(animation, new PropertyPath(propertyToAnimate));

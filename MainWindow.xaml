@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Save the Humans!" Height="700" Width="1000">
     <Window.Resources>
-        <ControlTemplate x:Key="Enemytemplate" TargetType="{x:Type ContentControl}">
+        <ControlTemplate x:Key="EnemyTemplate" TargetType="{x:Type ContentControl}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="4*"/>
@@ -85,7 +85,7 @@
                 Margin="0" TextWrapping="Wrap" 
                 Text="Avoid These" VerticalAlignment="Top" FontSize="18" Foreground="#FFFDF9F9"/>
             <ContentControl Content="ContentControl" HorizontalAlignment="Center" 
-                 VerticalAlignment="Center" Template="{DynamicResource Enemytemplate}"/>
+                 VerticalAlignment="Center" Template="{DynamicResource EnemyTemplate}"/>
 
         </StackPanel>
 
