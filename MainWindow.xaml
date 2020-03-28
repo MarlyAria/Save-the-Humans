@@ -28,7 +28,7 @@
             <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
         <Button x:Name="StartButton" Content="Start!" HorizontalAlignment="Center" 
-                Margin="54,65.4,54,66" Grid.Row="1" VerticalAlignment="Center" Height="19" Width="32"/>
+                Margin="54,65.4,54,66" Grid.Row="1" VerticalAlignment="Center" Height="19" Width="32" Click="StartButton_Click"/>
 
         <ProgressBar Grid.Column="1" Grid.Row="1" Margin="0,63.4,159.6,67" Grid.ColumnSpan="3"/>
 
