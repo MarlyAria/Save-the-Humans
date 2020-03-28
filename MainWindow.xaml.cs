@@ -29,7 +29,9 @@ namespace Save_the_Humans
         {
             AddEnemy();
         }
-
+        /// <summary>
+        /// test
+        /// </summary>
         private void AddEnemy()
         {
             ContentControl enemy = new ContentControl();
