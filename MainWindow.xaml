@@ -17,7 +17,7 @@
             </Grid>
         </ControlTemplate>
     </Window.Resources>
-    <Grid Margin="0,0,0,0" Height="700" Background="Black">
+    <Grid x:Name="grid" Margin="0,0,0,0" Height="700" Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="140"/>
             <ColumnDefinition Width="1*"/>
@@ -27,13 +27,13 @@
             <RowDefinition/>
             <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
-        <Button x:Name="StartButton" Content="Start!" HorizontalAlignment="Center" 
-                Margin="54,65.4,54,66" Grid.Row="1" VerticalAlignment="Center" Height="19" Width="32" Click="StartButton_Click"/>
+        <Button x:Name="startButton" Content="Start!" HorizontalAlignment="Center" 
+                Margin="54,65.4,54,66" Grid.Row="1" VerticalAlignment="Center" Height="19" Width="32" Click="startButton_Click"/>
 
-        <ProgressBar Grid.Column="1" Grid.Row="1" Margin="0,63.4,159.6,67" Grid.ColumnSpan="3"/>
+        <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="1" Margin="0,63.4,159.6,67" Grid.ColumnSpan="3"/>
 
         <Canvas x:Name="playArea" 
-                Grid.ColumnSpan="3" Margin="0,0,-0.4,150" Grid.RowSpan="2">
+                Grid.ColumnSpan="3" Margin="0,0,-0.4,150" Grid.RowSpan="2" MouseMove="playArea_MouseMove" MouseLeave="playArea_MouseLeave">
             <Canvas.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -51,13 +51,13 @@
                     <GradientStop Color="#FF3C7A29" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <StackPanel x:Name="Human" Orientation="Vertical">
+            <StackPanel x:Name="human" Orientation="Vertical" MouseDown="human_MouseDown" MouseEnter="human_MouseEnter">
                 <Ellipse Fill="White" Height="10" Width="10" Stroke="Black"/>
                 <Rectangle Fill="White" Height="25" Width="10" Stroke="Black"/>
 
             </StackPanel>
 
-            <TextBlock x:Name="GameOverText" Canvas.Left="260" TextWrapping="Wrap" Text="Game Over" 
+            <TextBlock x:Name="gameOverText" Canvas.Left="260" TextWrapping="Wrap" Text="Game Over" 
                        Canvas.Top="185" FontSize="100" FontFamily="Arial" FontWeight="Bold" 
                        FontStyle="Oblique" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
