@@ -66,7 +66,7 @@ namespace Save_the_Humans
 
         private void enemyTimer_Tick(object sender, EventArgs e)
         {
-            // code voor het animateren van de vijanden als je op de startknop klikt
+            // code voor het animeren van de vijanden als je op de startknop klikt
             AddEnemy();
         }
 
@@ -130,7 +130,7 @@ namespace Save_the_Humans
             storyboard.Begin();
         }
 
-
+        //code om human te sturen
         private void human_MouseDown(object sender, MouseButtonEventArgs e)
         {
             
@@ -141,6 +141,7 @@ namespace Save_the_Humans
             }
         }
 
+        //code om human te besturen
         private void human_MouseEnter(object sender, MouseEventArgs e)
         {
             if (targetTimer.IsEnabled && humanCaptured)
@@ -157,7 +158,7 @@ namespace Save_the_Humans
 
         private void playArea_MouseMove(object sender, MouseEventArgs e)
         {
-           //bepaald of human caputerd is of niet
+           //bepaald of human caputered is of niet
             if (humanCaptured)
             {
                 Point pointerPosition = e.GetPosition(null);
